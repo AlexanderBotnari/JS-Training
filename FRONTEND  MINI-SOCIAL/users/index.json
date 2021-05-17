@@ -1,0 +1,10 @@
+{
+    "status" : "succes",
+    "data": [
+        {"id":1 ,"type":"User","name":"Josh"},
+        {"id":2 ,"type":"User","name":"mar"},
+        {"id":3 ,"type":"User","name":"bas"},
+        {"id":4 ,"type":"User","name":"foo"},
+        {"id":5 ,"type":"User","name":"baz"}
+    ]
+}
