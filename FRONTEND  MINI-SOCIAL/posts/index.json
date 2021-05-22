@@ -1,10 +1,10 @@
 {
-    "status" : "succes",
+    "status": "succes",
     "data": [
-        {"id":1 ,"type":"Post"},
-        {"id":2 ,"type":"Post"},
-        {"id":3 ,"type":"Post"},
-        {"id":4 ,"type":"Post"},
-        {"id":5 ,"type":"Post"}
-       ]
-    }
+    {"id":1 ,"type":"Post"},
+    {"id":2 ,"type":"Post"},
+    {"id":3 ,"type":"Post"},
+    {"id":4 ,"type":"Post"},
+    {"id":5 ,"type":"Post"}
+]
+}
