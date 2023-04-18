@@ -56,7 +56,7 @@
         item.append(buttonGroup);
 
         return{
-            item, 
+            item,
             doneButton, 
             deleteButton,
         };
@@ -66,10 +66,13 @@
         let todoAppTitle = createAppTitle(title);
         let todoItemForm = createTodoItemForm();
         let todoList = createTodoList();
+        let valueFromStorage = JSON.parse(localStorage.getItem("32"));
 
         container.append(todoAppTitle);
         container.append(todoItemForm.form);
         container.append(todoList);
+
+        console.log(valueFromStorage);
 
         window.addEventListener('load', function(){
             if(todoItemForm.input.value === ""){
@@ -77,11 +80,7 @@
             }
         })
         todoItemForm.input.addEventListener('input', function(){
-            if(todoItemForm.input.value === ""){
-                todoItemForm.button.disabled = true;
-            }else{
-                todoItemForm.button.disabled = false;
-            }
+            todoItemForm.button.disabled = todoItemForm.input.value === "";
         });
 
         todoItemForm.form.addEventListener('submit', function(e){
@@ -100,7 +99,9 @@
             });
 
             todoList.append(todoItem.item);
-            
+
+            localStorage.setItem(todoItemForm.input.value, JSON.stringify(todoItem));
+
             todoItemForm.input.value = '';
             todoItemForm.button.disabled = true;
         })
