@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post</title>
+</head>
+<body>
+    <h1 id="title"></h1>
+    <p id="body"></p>
+    <ul id="comments"></ul>
+    <script>
+        // Получаем id статьи из URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const id = urlParams.get('id');
+
+        // Запрос на получение статьи
+        fetch(`https://gorest.co.in/public-api/posts/${id}`)
+            .then(response => response.json())
+            .then(data => {
+                // Заполняем заголовок и содержимое статьи
+                document.getElementById('title').textContent = data.data.title;
+                document.getElementById('body').textContent = data.data.body;
+            });
+
+        // Запрос на получение комментариев к статье
+        fetch(`https://gorest.co.in/public-api/comments?post_id=${id}`)
+            .then(response => response.json())
+            .then(data => {
+                // Создаем список комментариев
+                const comments = data.data.map(comment => {
+                    return `<li><strong>${comment.name}:</strong> ${comment.body}</li>`;
+                }).join('');
+
+                // Вставляем список комментариев в HTML
+                document.getElementById('comments').innerHTML = comments;
+            });
+    </script>
+</body>
+</html>

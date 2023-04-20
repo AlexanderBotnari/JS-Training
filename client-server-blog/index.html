@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+</head>
+<body>
+    <h1>Blog</h1>
+    <ul id="posts"></ul>
+    <nav>
+        <ul>
+            <li>
+                <a href="index.html">1</a>
+            </li>
+            <li id="previous-page">
+                <a href="#">Previous</a>
+            </li>
+            <li id="next-page">
+                <a href="#">Next</a>
+            </li>
+        </ul>
+    </nav>
+    <script>
+        // Получаем номер страницы из URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const page = urlParams.get('page') || 1;
+
+        // Запрос на получение списка статей
+        fetch(`https://gorest.co.in/public-api/posts?page=${page}`)
+            .then(response => response.json())
+            .then(data => {
+                // Создаем список статей
+                const posts = data.data.map(post => {
+                    return `<li><a href="post.html?id=${post.id}">${post.title}</a></li>`;
+                }).join('');
+
+                // Вставляем список статей в HTML
+                document.getElementById('posts').innerHTML = posts;
+
+                // Постраничная навигация
+                const pagination = data.meta.pagination;
+                if (pagination.page === 1) {
+                    document.getElementById('previous-page').classList.add('disabled');
+                } else {
+                    const previousPageUrl = `index.html?page=${pagination.page - 1}`;
+                    document.getElementById('previous-page').innerHTML = `<a href="${previousPageUrl}">Previous</a>`;
+                }
+                if (pagination.page === pagination.pages) {
+                    document.getElementById('next-page').classList.add('disabled');
+                } else {
+                    const nextPageUrl = `index.html?page=${pagination.page + 1}`;
+                    document.getElementById('next-page').innerHTML = `<a href="${nextPageUrl}">Next</a>`;
+                }
+            });
+    </script>
+</body>
+</html>
