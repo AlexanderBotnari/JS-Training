@@ -19,5 +19,14 @@ const verifyCats = function (catsJane, catsJulia) {
     });
 };
 
+const getAverageHumanAge = catAges => {
+    const avgHumanAge = catAges
+            .map(value => value <= 2 ? value * 10 : value * 7)
+            .filter(value => value >= 18)
+            .reduce((acc, value, _, arr) => acc + value / arr.length, 0);
+    console.log(avgHumanAge);
+}
+
 // verifyCats(janeData, juliaData);
-verifyCats(janeData1, juliaData1);
+//verifyCats(janeData1, juliaData1);
+getAverageHumanAge(janeData);
