@@ -12,6 +12,7 @@ class Workout{
 
     id = Date.now() + ''.slice(-10);
     date = new Date();
+    clickNumbers = 0;
 
     constructor(coords, distance, duration){
         this.coords = coords;
@@ -22,6 +23,10 @@ class Workout{
     _setDescription(){
         this.type === 'running' ? this.description = 'Alergat ' + new Intl.DateTimeFormat('ru-RU').format(this.date) : 
         this.description = 'Ciclism ' + new Intl.DateTimeFormat('ru-RU').format(this.date);
+    }
+
+    click(){
+        this.clickNumbers++;
     }
 }
 
@@ -69,9 +74,13 @@ class App{
     constructor(){
         this._getPosition();
 
+        this._getLocalStorageData();
+
         form.addEventListener('submit', this._newWorkout.bind(this));
         
         inputType.addEventListener('change', this._toggleClimbField);
+
+        containerWorkouts.addEventListener('click', this._moveToWorkout.bind(this));
     }
 
     _getPosition(){
@@ -96,6 +105,10 @@ class App{
             }).addTo(this.#map);
     
         this.#map.on('click', this._showForm.bind(this));
+
+        this.#workouts.forEach(workout => {
+            this.displayWorkout(workout);
+        });
     }
 
     _showForm(e){
@@ -157,7 +170,9 @@ class App{
 
         this._displayWorkoutOnSidebar(workout);
 
-        this._hideForm();        
+        this._hideForm();   
+        
+        this._addWorkoutsToLocalStorage();
     }
 
     displayWorkout(workout){
@@ -224,6 +239,43 @@ class App{
         }
         
         form.insertAdjacentHTML('afterend', html);
+    }
+
+    _moveToWorkout(e){
+        const workoutElement = e.target.closest('.workout');
+        if(!workoutElement) return;
+
+        const workout = this.#workouts.find(item => item.id === workoutElement.dataset.id);
+
+        this.#map.setView(workout.coords, 13, {
+            animate: true,
+            pan: {
+                duration: 1,
+            }
+        });
+
+        // workout.click();
+    }
+
+    _addWorkoutsToLocalStorage(){
+        localStorage.setItem('workouts', JSON.stringify(this.#workouts));
+    }
+
+    _getLocalStorageData(){
+        const data = JSON.parse(localStorage.getItem('workouts'));
+
+        if(!data) return;
+
+        this.#workouts = data;
+
+        this.#workouts.forEach(workout => {
+            this._displayWorkoutOnSidebar(workout);
+        });
+    }
+
+    reset(){
+        localStorage.removeItem('workouts');
+        location.reload();
     }
 }
 
