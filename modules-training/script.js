@@ -47,7 +47,7 @@ const state = {
 
 const stateCopy = Object.assign({}, state);
 const stateDeepCopy = cloneDeep(state);
-
+ 
 state.user.loggedIn = false;
 console.log(stateCopy);
 console.log(stateDeepCopy);
