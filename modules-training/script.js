@@ -51,3 +51,12 @@ const stateDeepCopy = cloneDeep(state);
 state.user.loggedIn = false;
 console.log(stateCopy);
 console.log(stateDeepCopy);
+
+
+//Polyfilling
+Promise.resolve("Testing").then(value => console.log(value));
+
+import 'core-js/stable';
+
+//Polyfilling async functions
+import 'regenerator-runtime/runtime';
