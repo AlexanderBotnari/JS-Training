@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+}
+
+.container{
+    width: 1170px;
+    margin: 0px auto;
+}
+
+.menu-logo img{
+    width: 100px;
+    height: 100px;
+}
+
+.menu-inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-list{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    display: flex;
+}
+
+.nav-item a{
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #999;
+    text-transform: uppercase;
+}
+
+.nav-item a:hover {
+    color: white;
+    background-color: indigo;
+    border-radius: 10px;
+}
