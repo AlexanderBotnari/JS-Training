@@ -1,0 +1,44 @@
+*{
+    box-sizing: border-box;
+}
+
+.container{
+    width: 1170px;
+    margin: 0px auto;
+}
+
+.box{
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: rgb(15,8,0);
+    background: linear-gradient(90deg, rgba(15,8,0,1) 0%, rgba(60,22,4,1) 69%, rgba(108,61,32,1) 100%);
+}
+
+.item{
+    text-align: center;
+}
+
+.number{
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 35px;
+}
+
+.text{
+    color: rgb(238, 211, 194);
+    text-transform: uppercase;
+    font-size: small;
+}
+
+.line{
+    border: 1px solid rgb(238, 211, 194);
+    width: 20px;
+    margin: 10px auto;
+}
+
+.icon{
+    color: rgb(238, 211, 194);
+    font-size: 30px;
+}
