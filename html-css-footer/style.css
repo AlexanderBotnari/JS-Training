@@ -1,0 +1,55 @@
+*{
+    box-sizing: border-box;
+}
+
+.container{
+    width: 1170px;
+    margin: 0px auto;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding-left: 150px;
+}
+
+.text-container{
+    width: 500px;
+    text-align: left;
+    color: gray;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 30px;
+}
+
+.icon i{
+    font-size: 200px;
+    color: darkcyan;
+    margin-right: 50px;
+}
+
+.links{
+    font-size: 30px;
+    color: rgb(132, 186, 132);
+    margin-left: 50px;
+}
+
+.links div{
+    width: 60px;
+    height: 60px;
+    border: 2px solid rgb(132, 186, 132);
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    border-radius: 30px;
+}
+
+.fb-icon{
+    margin-top: 30px;
+}
+
+div.pen-icon{
+    padding-left: 15px;
+}
+
+.links div:hover{
+    background-color: rgb(132, 186, 132);
+    color: white;
+}
