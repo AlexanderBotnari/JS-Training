@@ -61,6 +61,7 @@ header{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
 }
 
 h1{
@@ -245,3 +246,82 @@ section p{
     height: 50px;
     margin-right: 10px;
 }
+
+.col-3 img{
+    width: 100%;
+    height: 200px;
+}
+
+.city-info{
+    font-size: 70%;
+    font-weight: 300;
+    word-spacing: 1px;
+    line-height: 25px;
+}
+
+h3{
+    font-size: 120%;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+.float-clearing{
+    zoom: 1;
+}
+
+.float-clearing::after{
+    zoom: 1;
+    content: " ";
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+#cities-section{
+    background-color: #eaeaf3;
+}
+
+.city-icon{
+    color: #81E0FD;
+    display: inline-block;
+}
+
+#feedback-section{
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),url(../images/feedback-background.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+}
+
+blockquote{
+    font-style: italic;
+    line-height: 150%;
+}
+
+blockquote div::before{
+    content: "\201D";
+    font-size: 200%;
+}
+
+blockquote div::after{
+    content: "\201D";
+    font-size: 200%;
+}
+
+cite{
+    display: block;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+cite img{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border: 2px solid #81E0FD;
+    border-radius: 50px;
+}
+
