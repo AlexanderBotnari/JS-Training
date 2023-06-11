@@ -13,16 +13,16 @@
     <title>Ocean-Sushi</title>
 </head>
 <body>
-    <header>
+    <header id="header">
         <img id="logo-image" src="./images/sushi-logo.png" alt="logo">
         <nav>
             <p id="logo-text"><a href="#">Ocean Sushi</a></p>
             <ul id="main-nav">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Menu</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Order Online</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#food-images-section">Menu</a></li>
+                <li><a href="#futures-section">About</a></li>
+                <li><a href="#how-to-order-section">Order Online</a></li>
+                <li><a href="#cities-section">Contact</a></li>
             </ul>
         </nav>
         <div class="header-text">
@@ -220,7 +220,7 @@
     </section>
 
     <section id="feedback-section" class="float-clearing">
-        <h2>100k+ likes our sushi 🥰</h2>
+        <h2>100k+ likes our sushi 🤪</h2>
         <div>
             <div class="col-4">
                 <blockquote>
@@ -263,28 +263,28 @@
 
     <section id="contact-form-section">
         <h2>we are happy to hear from you</h2>
-        <div>
+        <div id="contact-form">
             <div class="form-row float-clearing">
-                <div class="col-2">
+                <div class="col-6">
                     <label for="name">Your name</label>
                 </div>
-                <div class="col-4">
+                <div class="col-6">
                     <input type="text" id="name" placeholder="Enter your name">
                 </div>
             </div>
             <div class="form-row float-clearing">
-                <div class="col-2">
+                <div class="col-6">
                     <label for="email">Your email</label>
                 </div>
-                <div class="col-4">
+                <div class="col-6">
                     <input type="email" id="email" placeholder="Enter your email">
                 </div>
             </div>
             <div class="form-row float-clearing">
-                <div class="col-2">
+                <div class="col-6">
                     <label for="subject">Select subject</label>
                 </div>
-                <div class="col-4">
+                <div class="col-6">
                     <select name="subject" id="subject">
                         <option value="feedback">feedback</option>
                         <option value="question">question</option>
@@ -293,27 +293,51 @@
                 </div>
             </div>
             <div class="form-row float-clearing">
-                <div class="col-2">
+                <div class="col-6">
                     <label for="news">Subscribe to newsletter</label>
                 </div>
-                <div class="col-4">
+                <div class="col-6">
                     <input type="checkbox" id="news" checked> Yes
                 </div>
             </div>
             <div class="form-row float-clearing">
-                <div class="col-2">
+                <div class="col-6">
                     <label for="text">Write text</label>
                 </div>
-                <div class="col-4">
+                <div class="col-6">
                     <textarea name="text" id="text" cols="30" rows="10" placeholder="Input text"></textarea>
                 </div>
             </div>
             <div class="form-row float-clearing">
-                <div class="col-4">
-                    <input type="submit" value="submit">
+                <div class="col-6">
+                    <input type="submit" value="SUBMIT">
                 </div>
             </div>
         </div>
     </section>
+    
+    <footer id="footer-section">
+        <div id="footer-nav">
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#food-images-section">Menu</a></li>
+                <li><a href="#futures-section">About</a></li>
+                <li><a href="#how-to-order-section">Order Online</a></li>
+                <li><a href="#cities-section">Contact</a></li>
+            </ul>
+        </div>
+        <div id="footer-social-links">
+            <ul>
+                <li><a href="#"><i class="icon ion-logo-facebook"></i></a></li>
+                <li><a href="#"><i class="icon ion-logo-instagram"></i></a></li>
+                <li><a href="#"><i class="icon ion-logo-youtube"></i></a></li>
+                <li><a href="#"><i class="icon ion-logo-twitter"></i></a></li>
+            </ul>
+        </div>
+        <div id="footer-text">
+            <p>&copy; All rights reserved</p>
+            <p>No child limit age</p>
+        </div>
+    </footer>
 </body>
 </html>
