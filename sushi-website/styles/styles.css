@@ -135,6 +135,7 @@ nav{
     color: #81E0FD;
     letter-spacing: 8px;
     padding-left: 30px;
+    margin-left: 50px;
 }
 
 #logo-image{
@@ -142,6 +143,47 @@ nav{
     width: auto;
     margin: 10px 0px 0px 20px;
     float: left;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+#sticky-nav{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #81E0FD;
+    z-index: 999;
+    box-shadow: 0 2px 2px #b9b5b3;
+}
+
+#sticky-nav #logo-image{
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#sticky-nav #logo-text a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #0A21AD;
+    letter-spacing: 8px;
+    padding-left: 30px;
+    margin-left: 50px;
+    opacity: 0.5;
+}
+
+#sticky-nav #main-nav li a:link, #main-nav li a:visited{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #0A21AD;
+    opacity: 0.5;
+}
+
+#sticky-nav #main-nav li a:hover, #main-nav li a:active{
+   color: #020524;
+   border-bottom: 2px solid #020524;
 }
 
 .button:link, .button:visited, input[type=submit]{
