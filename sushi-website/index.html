@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/animate.css">
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +20,7 @@
     <header id="header">
         <nav>
             <img id="logo-image" src="./images/sushi-logo.png" alt="logo">
-            <p id="logo-text"><a href="#">Ocean Sushi</a></p>
+            <p id="logo-text"><a href="#header">Ocean Sushi</a></p>
             <ul id="main-nav">
                 <li><a href="#header">Home</a></li>
                 <li><a href="#food-images-section">Menu</a></li>
@@ -28,10 +29,10 @@
                 <li><a href="#cities-section">Contact</a></li>
             </ul>
         </nav>
-        <div class="header-text">
+        <div class="header-text" id="header-text">
             <h1 id="header-title">The real ocean sushi</h1>
             <div id="header-buttons">
-                <a href="#" class="button order-button">Order</a>
+                <a href="#" class="button order-button anim4">Order</a>
                 <a href="#" class="button more-button">More</a>
             </div>
         </div>
@@ -42,14 +43,14 @@
             <h2>Unique creations</h2>
             <p id="headline-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur saepe corrupti unde quisquam fugit</p>
         </div>
-        <div class="col-3">
+        <div class="col-3 anim1">
             <i class="icon ion-ios-restaurant features-icon"></i>
             <p>
                 After shaking up the Sushi world, the young sushi craftsman Hiroyuki Sato from "Hakkoku" 
                 opens a new restaurant. After obtaining a Michelin star in only half a year as the Head Chef.
             </p>
         </div>
-        <div class="col-3">
+        <div class="col-3 anim1">
             <i class="icon ion-ios-tv features-icon"></i>
             <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae similique cumque praesentium 
@@ -57,7 +58,7 @@
                 aut omnis id ullam quaerat voluptas!
             </p>
         </div>
-        <div class="col-3">
+        <div class="col-3 anim1">
             <i class="icon ion-ios-contacts features-icon"></i>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, cumque obcaecati accusantium 
@@ -65,7 +66,7 @@
                 autem eum aliquam illum?
             </p>
         </div>
-        <div class="col-3">
+        <div class="col-3 anim1">
             <i class="icon ion-ios-happy features-icon"></i>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Est accusantium quos error autem, itaque 
@@ -126,7 +127,7 @@
     <section id="cities-section" class="float-clearing">
         <h2>Where find our</h2>
         <div>
-            <div class="col-3">
+            <div class="col-3 anim2">
                 <img src="./images/chisinau.jpg" alt="chisinau">
                 <h3>Chisinau</h3>
                 <div class="city-info">
@@ -144,7 +145,7 @@
             </div>
         </div>
         <div class="center-horinzontally">
-            <div class="col-3">
+            <div class="col-3 anim2">
                 <img src="./images/balti.JPG" alt="balti">
                 <h3>Balti</h3>
                 <div class="city-info">
@@ -162,7 +163,7 @@
             </div>
         </div>
         <div class="center-horinzontally">
-            <div class="col-3">
+            <div class="col-3 anim2">
                 <img src="./images/comrat.jpg" alt="comrat">
                 <h3>Comrat</h3>
                 <div class="city-info">
@@ -180,7 +181,7 @@
             </div>
         </div>
         <div class="center-horinzontally">
-            <div class="col-3">
+            <div class="col-3 anim2">
                 <img src="./images/edinet.jpg" alt="edinet">
                 <h3>Edinet</h3>
                 <div class="city-info">
@@ -201,7 +202,7 @@
 
     <section id="how-to-order-section">
         <h2>How to order</h2>
-        <div class="col-4" id="phone-image-container">
+        <div class="col-4 anim3" id="phone-image-container">
             <img src="./images/phone.jpg" alt="phone" id="phone-image">
         </div>
         <div class="col-5">

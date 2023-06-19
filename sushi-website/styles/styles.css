@@ -487,3 +487,12 @@ footer p{
         width: 100%;
     }
 }
+
+/* //animations */
+.anim1, .anim2, .anim3, .anim4{
+    opacity: 0;
+}
+
+.anim1.animate__animated, .anim2.animate__animated, .anim3.animate__animated, .anim4.animate__animated{
+    opacity: 1;
+}
