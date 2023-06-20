@@ -95,4 +95,22 @@ $(document).ready(function(){
       },
       offset: 60,
      });
-})
+
+     //mobile nav
+     $(".mobile-menu-button").click(function(){
+          let icon = $(".mobile-menu-button i");
+    
+          if(icon.hasClass('ion-ios-menu')){
+              icon.removeClass('ion-ios-menu');
+              icon.addClass('ion-ios-close');
+              $("nav").animate({height: "200px"}, 500);
+          }else{
+              icon.removeClass('ion-ios-close');
+              icon.addClass('ion-ios-menu');
+              $("nav").animate({height: "70px"}, 500);
+          }
+    
+          $("#main-nav").slideToggle(500);
+    
+    });
+});
