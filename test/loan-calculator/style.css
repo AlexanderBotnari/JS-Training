@@ -1,0 +1,50 @@
+.header-text{
+ color: darkgoldenrod;
+}
+
+.input-sum{
+ width: 200px;
+ height: 30px;
+ color: darkgoldenrod;
+ border: 1px solid darkgoldenrod;
+ border-radius: 10px;
+ margin-bottom: 10px;
+ -webkit-border-radius: 10px;
+ -moz-border-radius: 10px;
+ -ms-border-radius: 10px;
+ -o-border-radius: 10px;
+}
+
+section{
+ margin-left: 50px;
+}
+
+.input-sum::placeholder{
+ text-align: center;
+ color: darkgoldenrod;
+}
+
+span{
+ font-size: larger;
+ color: darkgoldenrod;
+}
+
+.input-submit{
+  width: 100px;
+  height: 40px;
+  background-color: transparent;
+  border: 2px solid darkgoldenrod;
+  border-radius: 10px;
+  color: darkgoldenrod;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.input-submit:hover{
+ background-color: darkgoldenrod;
+ color: white;
+ cursor: pointer;
+ transition-duration: 300ms;
+}
